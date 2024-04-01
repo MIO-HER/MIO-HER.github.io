@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<!--
+	Striped by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Blog - Contact</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Content -->
+			<div id="content">
+				<div class="inner">
+
+					<!-- Post -->
+						<article class="box post post-excerpt">
+							<header>
+								<!--
+									Note: Titles and subtitles will wrap automatically when necessary, so don't worry
+									if they get too long. You can also remove the <p> entirely if you don't
+									need a subtitle.
+								-->
+								<h2><a href="#">Got a question?</a></h2>
+								<p>I literally read every message, let me know if you are curious about anything.</p>
+							</header>
+							<div class="info">
+						
+
+							</div>
+<!-- Contact -->
+<article id="contact">
+    <h2 class="major">Contact</h2>
+    <form method="post" action="https://api.web3forms.com/submit">
+            <!-- Replace with your Access Key -->
+<input type="hidden" name="access_key" value="1f64d784-f72c-4be1-87e2-79d3328d3dde">
+
+        <div class="fields">
+            <div class="field half">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+            </div>
+            <div class="field half">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" />
+            </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4"></textarea>
+            </div>
+        </div>
+        <ul class="actions">
+            <!-- hCaptcha Spam Protection -->
+<div class="h-captcha" data-captcha="true"></div>
+            <li><input type="submit" value="Send Message" class="primary" /></li>
+            <li><input type="reset" value="Reset" /></li>
+        </ul>
+    </form>
+    <!-- Required for hCaptcha -->
+<script src="https://web3forms.com/client/script.js" async defer></script>
+<script>
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+const formData = new FormData(form);
+const object = Object.fromEntries(formData);
+const json = JSON.stringify(object);
+result.innerHTML = "Please wait..."
+
+fetch('https://api.web3forms.com/submit', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json',
+'Accept': 'application/json'
+},
+body: json
+})
+.then(async (response) => {
+let json = await response.json();
+if (response.status == 200) {
+result.innerHTML = "Form submitted successfully";
+} else {
+console.log(response);
+result.innerHTML = json.message;
+}
+})
+.catch(error => {
+console.log(error);
+result.innerHTML = "Something went wrong!";
+})
+.then(function() {
+form.reset();
+setTimeout(() => {
+result.style.display = "none";
+}, 3000);
+});
+});
+</script>
+    <ul class="icons">
+        <!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li> -->
+    </ul>
+</article>
+						</article> 
+
+					<!-- Post -->
+						<!-- <article class="box post post-excerpt">
+							<header>
+								<h2>The reality of living on your own.</h2>
+								<p>My first studio in Minneapolis.</p>
+							</header>
+							<div class="info">
+								<span class="date"><span class="month">Nov</span> <span class="day">1st</span><span class="year">, 2022</span></span>
+
+							</div>
+							<img src="https://i.ibb.co/34jSvHk/431856727-714642154154328-6265830559544484959-n.jpg" border="0" />
+							<p>
+								This is my first experience of independent living. In the past, I rented two apartments in my relationship. On this trip, however, I went alone this time, I took the opportunity to start over. Remember, it's never too late to reset and start over, so don't hesitate to take the plunge yourself. Realize that you may not have everything you want at first. Sometimes it just starts with a place to lay your head. The first night I rested on an unforgiving surface, but little by little I built my foundation.
+							</p>
+						</article> -->
+
+					<!-- Pagination -->
+						<!-- <div class="pagination">
+							<a href="#" class="button previous">Previous Page</a>-->
+							<!-- <div class="pages">
+								<a href="#" class="active">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<span>&hellip;</span>
+								<a href="#">20</a>
+							</div>
+							<a href="#" class="button next">Next Page</a>
+						</div>  -->
+
+				</div>
+			</div>
+
+		<!-- Sidebar -->
+			<div id="sidebar">
+
+				<!-- Logo -->
+					<h1 id="logo"><a href="index.html">MIO'S BLOG</a></h1>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Latest Post</a></li>
+							<li><a href="mental.html">MENTAL HEALTH</a></li> 
+							<li><a href="fashion.html">FASHION</a></li> 
+							<li><a href="foodie.html">FOODIE</a></li>
+							<li class="current"><a href="contact.html">CONTACT</a></li>
+						</ul>
+					</nav>
+
+
+
+
+				<!-- Copyright -->
+					<ul id="copyright">
+						<li>&copy; MIO'S BLOG</li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
